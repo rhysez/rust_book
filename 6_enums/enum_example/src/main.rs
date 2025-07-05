@@ -1,4 +1,4 @@
-// Enums allow us to enumerate different variants of data.
+// Enums allow us to define different variants of data.
 // An enum value can only be one of it's variants.
 // In this case, an IP Address can only ever be either V4 or V6.
 // So, an enum is appropriate to use for this.

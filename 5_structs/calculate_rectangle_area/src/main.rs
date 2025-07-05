@@ -1,4 +1,4 @@
-// We use the derive keyword to implement the the Debug trait on our struct
+// We use the derive keyword to implement the Debug trait on our struct
 // This allows us to print out more helpful debugging info.
 #[derive(Debug)]
 struct Rectangle {

@@ -55,7 +55,7 @@ fn main() {
     // Array type
     // Fixed length, all values must be of the same type
     // Arrays are useful when we want our data to be stored on the stack
-    // We can annotate an array via this format [Type, Number of values]
+    // We can annotate an array via this format [Type; Number of values]
     let my_array: [i32; 5] = [1, 2, 3, 4, 5];
 
     // If all values in an array are the same, we can initialize it like this

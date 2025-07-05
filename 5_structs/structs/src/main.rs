@@ -43,7 +43,7 @@ fn main() {
     }
 
     // We can simplify this function using the Field Init shorthand
-    // Notice 'username' and 'email
+    // Notice 'username' and 'email' are implicitly assigned from the function parameters.
     fn field_init_example(email: String, username: String) -> User {
         User {
             active: true,

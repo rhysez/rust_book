@@ -2,8 +2,13 @@
 // Vectors store multiple values next to eachother in memory. 
 // This is different to an array, where the values appear in random memory locations. 
 fn main() {
+    // Vectors are defined using the Vec<T> type, where T is the type of the values stored in the vector.
+    // We can create a new vector using the Vec::new() method, or the vec! macro.
+    // The Vec::new() method creates an empty vector, while the vec! macro creates
+    // a new vector with the values provided in the macro.
+    // The type of the vector is inferred from the values provided in the macro.
     let mut v: Vec<i32> = Vec::new();
-    let _v_inferred = vec![1, 2, 3]; // vec! macro creates a new vector with an inferred type.
+    let _v_inferred = vec![1, 2, 3];
 
     // We can add a value to a vector using the .push method (the vector must be mutable).
     v.push(1);
@@ -15,6 +20,10 @@ fn main() {
     println!("The value of the third element is: {}", third);
 
     let third: Option<&i32> = v.get(2); // .get returns a reference to the value.
+
+    // We can then use pattern matching to handle potential errors.
+    // Some() is returned if the value does exist.
+    // None is returned if the value does not exist.
     match third {
         Some(third) => println!("The third element is {third}"),
         None => println!("There is no third element.")
@@ -38,6 +47,8 @@ fn main() {
         Text(String)
     }
 
+    // Now we have an int, float and string stored in the same vector.
+    // Although technically they are all of type SpreadsheetCell.
     let _row = vec![
         SpreadsheetCell::Int(24),
         SpreadsheetCell::Float(12.4),
